@@ -1,26 +1,26 @@
 // 手写简化版redux
 
-interface IState {
+export interface IState {
   // 自定义state
 }
 
-interface IAction {
+export interface IAction {
   type: string,
   [other: string]: any
 }
 
-interface IReducer {
+export interface IReducer {
   (state: IState | undefined, action: IAction): IState
 }
 
-interface IListener {
+export interface IListener {
   (state: IState): void
 }
 
-class Store {
-  public store = {};
-  public listener: Array<IListener> = [];
-  public reducer: IReducer;
+export class Store {
+  private store = {};
+  private listener: Array<IListener> = [];
+  private reducer: IReducer;
 
   constructor (reducer: IReducer) {
     this.reducer = reducer;
@@ -37,9 +37,13 @@ class Store {
       this.listener.forEach(fn => fn(this.store));
     }
   }
+
+  getState = () => {
+    return this.store
+  }
 }
 
-function createStore(reducer: IReducer) {
+export function createStore(reducer: IReducer) {
   return new Store(reducer);
 }
 
