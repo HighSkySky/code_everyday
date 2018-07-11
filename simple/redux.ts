@@ -48,10 +48,10 @@ function createStore(reducer: IReducer) {
 // state => actionType => action => reducer => create store
 
 // redux 事件流
-// store.dispatch(action) => reducer(state, action) => (middleware) => return new store
+// store.dispatch(action) => (middleware) => reducer(state, action)  => return new store
 
 // reducer
-// reducer 必须保证为纯函数，保证输入输出，对于有副作用的方法放在middleware中实现
+// reducer 必须保证为纯函数，保证输入输出，对于有副作用的方法放在 middleware 中实现
 
 // middleware
 // middleware 的本质是重写dispatch方法
