@@ -1,4 +1,4 @@
-import { createStore, IReducer, IState, IAction, Store } from './redux';
+import { createStore, IReducer, IState, IAction, Store } from '.';
 
 
 const reducer: IReducer = function (state, action) {
