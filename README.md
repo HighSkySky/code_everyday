@@ -9,6 +9,7 @@
 |   |-- bind 使用 apply 实现一个bind函数
 |   |-- koa-compose koa 中间件执行模块, 模拟实现中间件运行流程
 |   |-- deepclone 深拷贝的几种实现方法
+|   |-- throttler 函数节流
 |
 - note js概念知识点 example
 ```
