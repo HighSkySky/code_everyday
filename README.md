@@ -10,6 +10,7 @@
 |   |-- koa-compose koa 中间件执行模块, 模拟实现中间件运行流程
 |   |-- deepclone 深拷贝的几种实现方法
 |   |-- throttler 函数节流
+|   |-- debounce 函数去抖
 |
 - note js概念知识点 example
 ```
